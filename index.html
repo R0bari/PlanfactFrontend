@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Таблица</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.1.0/material.min.css">
+    <link rel="stylesheet" href="css/standart-reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="new-element-blackout" style="display: none;">
+        <div class="new-element" id="new-element">
+            <div class="new-element-header">
+                Add new order
+            </div>
+            <div class="divide"></div>
+            <div class="new-element-form">
+                <form autocomplete="off">
+                    <input type="text" class="new-element-firstname" id="new-element-firstname" value="" placeholder="First Name">
+                    <input type="text" class="new-element-lastname" value="" placeholder="Second Name">
+                    <input type="email" class="new-element-email" value="" placeholder="Email">
+                    <input type="text" class="new-element-status" value="" placeholder="Status">
+                    <input type="date" value="" class="new-element-date">
+                    <input type="button" class="form-button" id="new-element-save"value="Save Settings" >
+                    <input type="button" class="form-button" id="new-element-close"value="Close" >
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="edit-element-blackout" style="display: none;">
+        <div class="new-element" id="new-element">
+            <div class="new-element-header">
+                Edit order
+            </div>
+            <div class="divide"></div>
+            <div class="new-element-form">
+                <form autocomplete="off">
+                    <input type="text" class="edit-element-firstname" id="new-element-firstname" value="" placeholder="First Name">
+                    <input type="text" class="edit-element-lastname" value="" placeholder="Second Name">
+                    <input type="email" class="edit-element-email" value="" placeholder="Email">
+                    <input type="text" class="edit-element-status" value="" placeholder="Status">
+                    <input type="date" class="edit-element-date" value="">
+                    <input type="button" class="form-button" id="edit-element-save"value="Save Settings" >
+                    <input type="button" class="form-button" id="edit-element-close"value="Close" >
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="wraper">
+        
+        <div class="orders">
+            <p class="orders-label">Latest Orders</p>
+        </div>
+        <div class="orders-count">
+            
+        </div>
+        <button id="create-button"><p id="create-button-text">NEW ENTRY</p></button>
+        
+        <table id="table" class="mdl-data-table">
+          
+        </table>
+        <div id="loader-wrapper">
+            <div id="loader"></div>
+        </div>
+    </div>
+    </div>
+    
+</body>
+
+</html>
